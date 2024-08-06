@@ -1,0 +1,112 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  color: white;
+  background-color: #f2f2f2;
+  font-size: 15px;
+}
+
+:root {
+  --orange: hsl(31, 77%, 52%);
+  --green: hsl(184, 100%, 22%);
+  --blue: hsl(179, 100%, 13%);
+
+  --white-1: hsl(0, 0%, 95%);
+  --paragraph: hsla(0, 0%, 100%, 0.75);
+}
+
+.container {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  margin: 25px;
+  max-width: 925px;
+}
+
+.card {
+  display: grid;
+  gap: 2rem;
+  padding: 40px;
+}
+
+.card h2 {
+  text-transform: uppercase;
+  font-family: "Big Shoulders Display", sans-serif;
+  font-size: 34px;
+  color: var(--white-1);
+}
+
+.card p {
+  color: var(--paragraph);
+}
+
+.yellow {
+  background-color: var(--orange);
+  border-radius: 10px 10px 0 0;
+}
+.green {
+  background-color: var(--green);
+}
+.blue {
+  background-color: var(--blue);
+  border-radius: 0 0 10px 10px;
+}
+
+.btn {
+  border: 2px solid white;
+  border-radius: 25px;
+  padding: 14px 38px;
+  font-size: 15px;
+  justify-self: start;
+  background-color: var(--white-1);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: transparent;
+  color: white;
+}
+
+.btn--yellow {
+  color: var(--orange);
+}
+.btn--green {
+  color: var(--green);
+}
+.btn--blue {
+  color: var(--blue);
+}
+
+@media (min-width: 600px) {
+  .cards {
+    flex-direction: row;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .yellow, .blue {
+    border-radius: 0;
+  }
+
+  .btn {
+    margin-top: 50px;
+  }
+  .card h2 {
+    font-size: 40px;
+  }
+  .card {
+  padding: 50px;
+}
+}
