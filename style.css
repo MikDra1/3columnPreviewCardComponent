@@ -50,6 +50,7 @@ body {
 
 .card p {
   color: var(--paragraph);
+  line-height: 1.7;
 }
 
 .yellow {
